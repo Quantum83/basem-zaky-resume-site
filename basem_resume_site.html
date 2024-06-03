@@ -9,26 +9,9 @@
         <link rel="stylesheet" href="new_resume_style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" type="image/x-icon" href="./planks_icon.webp">
-
-        <script>
-            const apiUrl = 'https://1ip1v7hgzc.execute-api.us-east-1.amazonaws.com/prod/visitor-counter';
-    
-            async function updateVisitorCount() {
-                try {
-                    const response = await fetch(apiUrl);
-                    const data = await response.json();
-                    document.getElementById('visitor-count').textContent = data.count;
-                } catch (error) {
-                    console.error('Error fetching visitor count:', error);
-                    document.getElementById('visitor-count').textContent = 'Error';
-                }
-            }
-    
-            // Update visitor count on page load
-            window.onload = updateVisitorCount;
-        </script>   
-
     </head>
+
+
     <body>
         <header>
             <div class="name">
@@ -41,6 +24,38 @@
                 <div class="version">STATIC V2</div>
                 <div class="visits">Visitor Count: <span id="visitor-count">Loading...</span></div>
             </div>
+
+            <script>
+                const apiUrl = 'https://YOUR_API_ID.execute-api.YOUR_REGION.amazonaws.com/prod/visitorcount';
+
+                async function updateVisitorCount() {
+                    try {
+                        const response = await fetch(apiUrl);
+                        
+                        // Check if response is OK
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+
+                        // Parse JSON response
+                        const data = await response.json();
+
+                        // Check if 'count' exists in the response
+                        if (!data.hasOwnProperty('count')) {
+                            throw new Error('Invalid response: missing count');
+                        }
+
+                        // Update visitor count on the webpage
+                        document.getElementById('visitor-count').textContent = data.count;
+                    } catch (error) {
+                        console.error('Error fetching visitor count:', error);
+                        document.getElementById('visitor-count').textContent = 'Error';
+                    }
+                }
+
+                window.onload = updateVisitorCount;
+            </script>
+            
         </header>
 
         <div class="content parchment">
