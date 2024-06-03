@@ -9,17 +9,28 @@
         <link rel="stylesheet" href="new_resume_style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" type="image/x-icon" href="./planks_icon.webp">
+
+        <script>
+            fetch('https://1ip1v7hgzc.execute-api.us-east-1.amazonaws.com/prod')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('visitor-count').innerText = 'Vistor Count: ' + data.count;
+                })
+                .catch(error => console.error('Error fetching visitor count:', error));
+        </script>    
+
     </head>
     <body>
         <header>
-            <div class="name parchment">
+            <div class="name">
                 <img src="./planet_icon.webp" alt="a paper-like rendering of a planet orbited by stars">
                 <h1>Basem Zaky</h1>
             </div>
-            <div class="info parchment">
+            <div class="info">
                 <div class="email">baszak25@gmail.com</div>
                 <a href="https://basemz-resume.name"><div class="other-site">Website V1</div></a>
                 <div class="version">STATIC V2</div>
+                <div id="visitor-count"></div>
             </div>
         </header>
 
