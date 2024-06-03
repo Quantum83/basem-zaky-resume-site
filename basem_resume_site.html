@@ -27,7 +27,7 @@
 
             <script>
                 const apiUrl = 'https://1ip1v7hgzc.execute-api.us-east-1.amazonaws.com/prod/visitor-counter';
-
+            
                 async function updateVisitorCount() {
                     try {
                         const response = await fetch(apiUrl);
@@ -36,15 +36,16 @@
                         if (!response.ok) {
                             throw new Error(`HTTP error! status: ${response.status}`);
                         }
-
+            
                         // Parse JSON response
-                        const data = await response.json();
-
+                        const responseBody = await response.json();
+                        const data = JSON.parse(responseBody.body);
+            
                         // Check if 'count' exists in the response
                         if (!data.hasOwnProperty('count')) {
                             throw new Error('Invalid response: missing count');
                         }
-
+            
                         // Update visitor count on the webpage
                         document.getElementById('visitor-count').textContent = data.count;
                     } catch (error) {
@@ -52,9 +53,10 @@
                         document.getElementById('visitor-count').textContent = 'Error';
                     }
                 }
-
+            
                 window.onload = updateVisitorCount;
             </script>
+            
             
         </header>
 
