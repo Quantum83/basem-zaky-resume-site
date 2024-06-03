@@ -3,21 +3,22 @@
     --sidebar-margin: 20px;
     --sidebar_gradient_percent: 95%;
 
+    /*
     --text: #D1D3E1;
     --background: #2D3250;
     --primary: #F6B17A;
     --secondary: #424769;
     --in_between: color-mix(in srgb, var(--background) 75%, var(--secondary) 25%);
     --accent: #F6B17A;
-
-    /*
+    */
+    
     --text: #E4C59E;
     --background: #322C2A;
     --primary: #CFB79A;
     --secondary: #75542B;
     --in_between: color-mix(in srgb, var(--background) 75%, var(--secondary) 25%);
     --accent: #D09A58;
-    */
+    
 }
 
 * {
