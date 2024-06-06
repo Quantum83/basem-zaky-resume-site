@@ -127,6 +127,27 @@ body {
     color: var(--text);
 }
 
+#projects a {
+    color: var(--accent);
+    background-color: var(--background);
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 3px;
+    transition: 0.5s;
+}
+#projects a:hover {
+    color: var(--background);
+    background-color: var(--accent);
+    cursor: pointer;
+}
+#projects a:active {
+    color: var(--background);
+    background-color: var(--secondary);
+    cursor: grabbing;
+}
+
+
 .section-title {
     color: var(--accent);
     font-size: xx-large;
