@@ -94,6 +94,7 @@ header:hover {
 }
 .other-site:hover {
     background-color: var(--primary);
+    cursor: pointer;
 }
 
 
