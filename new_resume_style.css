@@ -1,9 +1,9 @@
 :root {
-    --sidebar_width: 15%;
-    --sidebar-margin: 20px;
-    --sidebar_gradient_percent: 95%;
+  --sidebar_width: 15%;
+  --sidebar-margin: 20px;
+  --sidebar_gradient_percent: 95%;
 
-    /*
+  /*
     --text: #D1D3E1;
     --background: #2D3250;
     --primary: #F6B17A;
@@ -11,150 +11,156 @@
     --in_between: color-mix(in srgb, var(--background) 75%, var(--secondary) 25%);
     --accent: #F6B17A;
     */
-    
-    --text: #E4C59E;
-    --background: #322C2A;
-    --primary: #CFB79A;
-    --secondary: #75542B;
-    --in_between: color-mix(in srgb, var(--background) 75%, var(--secondary) 25%);
-    --accent: #D09A58;
-    
+
+  --text: #e4c59e;
+  --background: #322c2a;
+  --primary: #cfb79a;
+  --secondary: #75542b;
+  --in_between: color-mix(in srgb, var(--background) 75%, var(--secondary) 25%);
+  --accent: #d09a58;
 }
 
 * {
-    box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-
-
 
 .name {
-    margin: auto;
-	text-align: center;
-	width: fit-content;
-    max-width: 75vw;
-    font-size: xx-large;
-	border-radius: 2vh;
-	padding-right: 7vw;
-	padding-left: 7vw;
-    padding-top: 2vw;
-    padding-bottom: 1vw;
-    margin-top: 5%;
-	margin-bottom: 25px;
-	background: var(--primary);
-    color: rgb(50, 44, 42);
+  margin: auto;
+  text-align: center;
+  width: fit-content;
+  max-width: 75vw;
+  font-size: xx-large;
+  border-radius: 2vh;
+  padding-right: 7vw;
+  padding-left: 7vw;
+  padding-top: 2vw;
+  padding-bottom: 1vw;
+  margin-top: 5%;
+  margin-bottom: 25px;
+  background: var(--primary);
+  color: rgb(50, 44, 42);
 }
 .name img {
-    width: 50%;
+  width: 50%;
 }
 
 header {
-    width: fit-content;
-    margin: auto;
-    filter: drop-shadow(10px 10px 5px black);
-    margin-bottom: 50px;
-    transition: 1s;
+  width: fit-content;
+  margin: auto;
+  filter: drop-shadow(10px 10px 5px black);
+  margin-bottom: 50px;
+  transition: 1s;
 }
 header:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(10px 10px 20px black);
+  transform: scale(1.1);
+  filter: drop-shadow(10px 10px 20px black);
 }
 
 .info {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 3vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
 }
 .info a {
-    text-decoration: none;
-    color: var(--background);
+  text-decoration: none;
+  color: var(--background);
 }
-.email, .version, .other-site, .visits {
-	text-align: center;
-    font-weight: 900;
-	width: fit-content;
-	min-width: fit-content;
-	border-radius: 1vh;
-	padding-right: 2vw;
-	padding-left: 2vw;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-    margin-top: 0;
-	margin-bottom: 25px;
-	background: var(--accent);
-    color: rgb(50, 44, 42);
-    transition: 1s;
+.email,
+.version,
+.other-site,
+.visits,
+.linkedin {
+  text-align: center;
+  font-weight: 900;
+  width: fit-content;
+  min-width: fit-content;
+  border-radius: 1vh;
+  padding-right: 2vw;
+  padding-left: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  margin-top: 0;
+  margin-bottom: 25px;
+  background: var(--accent);
+  color: rgb(50, 44, 42);
+  transition: 1s;
 }
-.email:hover, .version:hover, .other-site:hover, .visits:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0px 0px 30px black);
+.email:hover,
+.version:hover,
+.other-site:hover,
+.visits:hover,
+.linkedin:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0px 30px black);
 }
-.other-site:hover {
-    background-color: var(--primary);
-    cursor: pointer;
+.other-site:hover,
+.linkedin:hover {
+  background-color: var(--primary);
+  cursor: pointer;
 }
-
-
-
 
 .content {
-    background-color: color-mix(in srgb, hsl(33, 46%, 31%) 20%, var(--background) 80%);
-    height: fit-content;
-    width: fit-content;
-    max-width: 85vw;
-    margin: auto;
-    border-radius: 2vh;
-    padding-top: 3vw;
-    padding-left: 2.5vw;
-    padding-right: 2.5vw;
-    padding-bottom: 2vw;
-    margin-bottom: 3vh;
-    filter: drop-shadow(10px 10px 5px black);
-    transition: 1s;
+  background-color: color-mix(
+    in srgb,
+    hsl(33, 46%, 31%) 20%,
+    var(--background) 80%
+  );
+  height: fit-content;
+  width: fit-content;
+  max-width: 85vw;
+  margin: auto;
+  border-radius: 2vh;
+  padding-top: 3vw;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  padding-bottom: 2vw;
+  margin-bottom: 3vh;
+  filter: drop-shadow(10px 10px 5px black);
+  transition: 1s;
 }
 .content:hover {
-    transform: scale(1.1);
-    margin-bottom: 4vw;
-    filter: drop-shadow(10px 10px 20px black);
+  transform: scale(1.1);
+  margin-bottom: 4vw;
+  filter: drop-shadow(10px 10px 20px black);
 }
 
 /*Body styling*/
 body {
-    margin: 0;
-    background-color: var(--background);
-    color: var(--text);
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 #projects a {
-    color: var(--accent);
-    background-color: var(--background);
-    text-decoration: none;
-    padding: 5px;
-    border-radius: 10px;
-    margin: 3px;
-    transition: 0.5s;
+  color: var(--accent);
+  background-color: var(--background);
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 3px;
+  transition: 0.5s;
 }
 #projects a:hover {
-    color: var(--background);
-    background-color: var(--accent);
-    cursor: pointer;
+  color: var(--background);
+  background-color: var(--accent);
+  cursor: pointer;
 }
 #projects a:active {
-    color: var(--background);
-    background-color: var(--secondary);
-    cursor: grabbing;
+  color: var(--background);
+  background-color: var(--secondary);
+  cursor: grabbing;
 }
-
 
 .section-title {
-    color: var(--accent);
-    font-size: xx-large;
-    padding: 0px;
-    margin: 0px;
+  color: var(--accent);
+  font-size: xx-large;
+  padding: 0px;
+  margin: 0px;
 }
 .section-text-title {
-    font-weight: bold;
+  font-weight: bold;
 }

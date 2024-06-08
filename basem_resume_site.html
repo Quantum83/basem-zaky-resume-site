@@ -1,126 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Basem Zaky | Resume</title>
-        <meta name="description" content="Basem Zaky's Resume for the Cloud Resume Challenge, deployed with AWS and Terraform">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="new_resume_style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="icon" type="image/x-icon" href="./planks_icon.webp">
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Basem Zaky | Resume</title>
+    <meta
+      name="description"
+      content="Basem Zaky's Resume for the Cloud Resume Challenge, deployed with AWS and Terraform"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="new_resume_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="./planks_icon.webp" />
+  </head>
 
-
-    <body>
-        <header>
-            <div class="name">
-                <img src="./planet_icon.webp" alt="a paper-like rendering of a planet orbited by stars">
-                <h1>Basem Zaky</h1>
-            </div>
-            <div class="info">
-                <div class="email">baszak25@gmail.com</div>
-                <a href="https://basemz-resume.name"><div class="other-site">Website V1</div></a>
-                <div class="version">STATIC V2</div>
-                <div class="visits">Visitor Count: <span id="visitor-count">Loading...</span></div>
-            </div>
-
-            <script>
-                const apiUrl = 'https://1ip1v7hgzc.execute-api.us-east-1.amazonaws.com/prod/visitor-counter';
-            
-                async function updateVisitorCount() {
-                    try {
-                        const response = await fetch(apiUrl);
-                        
-                        // Check if response is OK
-                        if (!response.ok) {
-                            throw new Error(`HTTP error! status: ${response.status}`);
-                        }
-            
-                        // Parse JSON response
-                        const responseBody = await response.json();
-                        const data = JSON.parse(responseBody.body);
-            
-                        // Check if 'count' exists in the response
-                        if (!data.hasOwnProperty('count')) {
-                            throw new Error('Invalid response: missing count');
-                        }
-            
-                        // Update visitor count on the webpage
-                        document.getElementById('visitor-count').textContent = data.count;
-                    } catch (error) {
-                        console.error('Error fetching visitor count:', error);
-                        document.getElementById('visitor-count').textContent = 'Error';
-                    }
-                }
-            
-                window.onload = updateVisitorCount;
-            </script>
-            
-            
-        </header>
-
-        <div class="content parchment">
-            <section id="projects">
-                <h1 class="section-title">Projects</h1>
-
-                <p class="section-text-title">The Cloud Resume Challenge || This Website</p>
-                <p class="section-text">AWS-based full-stack serverless coding project for cloud beginners</p>
-                <ul class="section-text">
-                    <li>Written in HTML and CSS</li>
-                    <li>Deployed using HashiCorp Terraform</li>
-                    <li>Hosted as a static website on AWS S3</li>
-                    <li>Secured HTTPS with AWS CloudFront</li>
-                    <li>CI/CD with GitHub and VSCode</li>
-                    <li>Visitor Counter with AWS API Gateway, Lambda, and DynamoDB</li>
-                </ul>
-                <br>
-                <p class="section-text-title">Yousof's Hairkuts</p>
-                <p class="section-text">Basic html site for annoying my siblings.</p>
-                <ul class="section-text">
-                    <li>Written in HTML and CSS</li>
-                    <li>Revolutionary 2 page setup</li>
-                    <li>Comprehensive list of hairkuts</li>
-                    <li>Built to annoy</li>
-                </ul>
-                <br>
-                <p class="section-text-title">CodePens</p>
-                <p class="section-text">Check out <a href="https://codepen.io/Basem-Zaky">my CodePen</a> for more projects.</p>
-            </section>
-            <br>
-            <section id="skills">
-                <h1 class="section-title">Skills</h1>
-                <ul class="section-text-title">
-                    <li>Website Design with HTML and CSS</li>
-                    <li>Problem solving with Python</li>
-                    <li>3d Rendering with Blender</li>
-                    <li>Video Editing with Premiere Pro and DaVinci Resolve</li>
-                </ul>
-            </section>
-            <br>
-            <section id="interests">
-                <h1 class="section-title">Interests</h1>
-                <p class="section-text-title">Computer Science || Chemistry || Math || Physics || Life Sciences || Skateboarding || Freerunning</p>
-                <p class="section-text">In my free time, I'm committed to lifelong learning and exploring diverse interests. I enjoy delving into subjects like computer science, chemistry, mathematics, and physics, as they fuel my curiosity and passion for knowledge. Alongside my intellectual pursuits, I prioritize a balanced lifestyle by staying active through activities like Freerunning and Skateboarding. These pursuits not only challenge me physically but also cultivate creativity and resilience.</p>
-            </section>
-            <br>
-            <section id="experience">
-                <h1 class="section-title">Experience</h1>
-                <ul class="section-text-title">
-                    <li>Advanced Video Production, Walnut High School</li>
-                </ul>
-            </section>
-            <br>
-            <section id="education">
-                <h1 class="section-title">Education</h1>
-                <ul class="section-text-title">
-                    <li>Walnut High School</li>
-                    <li>Self-Taught, Online</li>
-                    <li>Amazon AWS Skill Builder</li>
-                    <li>FreeCodeCamp.org</li>
-                    <li>Youtube.com</li>
-                </ul>
-            </section>
+  <body>
+    <header>
+      <div class="name">
+        <img
+          src="./planet_icon.webp"
+          alt="a paper-like rendering of a planet orbited by stars"
+        />
+        <h1>Basem Zaky</h1>
+      </div>
+      <div class="info">
+        <div class="email">baszak25@gmail.com</div>
+        <a href="https://basemz-resume.name"
+          ><div class="other-site">Website V1</div></a
+        >
+        <a href="https://www.linkedin.com/in/basem-zaky-450733312">
+          <div class="linkedin">LinkedIn</div>
+        </a>
+        <div class="version">STATIC V2</div>
+        <div class="visits">
+          Visitor Count: <span id="visitor-count">Loading...</span>
         </div>
-    </body>
+      </div>
+
+      <script>
+        const apiUrl =
+          "https://1ip1v7hgzc.execute-api.us-east-1.amazonaws.com/prod/visitor-counter";
+
+        async function updateVisitorCount() {
+          try {
+            const response = await fetch(apiUrl);
+
+            // Check if response is OK
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            // Parse JSON response
+            const responseBody = await response.json();
+            const data = JSON.parse(responseBody.body);
+
+            // Check if 'count' exists in the response
+            if (!data.hasOwnProperty("count")) {
+              throw new Error("Invalid response: missing count");
+            }
+
+            // Update visitor count on the webpage
+            document.getElementById("visitor-count").textContent = data.count;
+          } catch (error) {
+            console.error("Error fetching visitor count:", error);
+            document.getElementById("visitor-count").textContent = "Error";
+          }
+        }
+
+        window.onload = updateVisitorCount;
+      </script>
+    </header>
+
+    <div class="content parchment">
+      <section id="projects">
+        <h1 class="section-title">Projects</h1>
+
+        <p class="section-text-title">
+          The Cloud Resume Challenge || This Website
+        </p>
+        <p class="section-text">
+          AWS-based full-stack serverless coding project for cloud beginners
+        </p>
+        <ul class="section-text">
+          <li>Written in HTML and CSS</li>
+          <li>Deployed using HashiCorp Terraform</li>
+          <li>Hosted as a static website on AWS S3</li>
+          <li>Secured HTTPS with AWS CloudFront</li>
+          <li>CI/CD with GitHub and VSCode</li>
+          <li>Visitor Counter with AWS API Gateway, Lambda, and DynamoDB</li>
+        </ul>
+        <br />
+        <p class="section-text-title">Yousof's Hairkuts</p>
+        <p class="section-text">Basic html site for annoying my siblings.</p>
+        <ul class="section-text">
+          <li>Written in HTML and CSS</li>
+          <li>Revolutionary 2 page setup</li>
+          <li>Comprehensive list of hairkuts</li>
+          <li>Built to annoy</li>
+        </ul>
+        <br />
+        <p class="section-text-title">CodePens</p>
+        <p class="section-text">
+          Check out <a href="https://codepen.io/Basem-Zaky">my CodePen</a> for
+          more projects.
+        </p>
+      </section>
+      <br />
+      <section id="skills">
+        <h1 class="section-title">Skills</h1>
+        <ul class="section-text-title">
+          <li>Website Design with HTML and CSS</li>
+          <li>Problem solving with Python</li>
+          <li>3d Rendering with Blender</li>
+          <li>Video Editing with Premiere Pro and DaVinci Resolve</li>
+        </ul>
+      </section>
+      <br />
+      <section id="interests">
+        <h1 class="section-title">Interests</h1>
+        <p class="section-text-title">
+          Computer Science || Chemistry || Math || Physics || Life Sciences ||
+          Skateboarding || Freerunning
+        </p>
+        <p class="section-text">
+          In my free time, I'm committed to lifelong learning and exploring
+          diverse interests. I enjoy delving into subjects like computer
+          science, chemistry, mathematics, and physics, as they fuel my
+          curiosity and passion for knowledge. Alongside my intellectual
+          pursuits, I prioritize a balanced lifestyle by staying active through
+          activities like Freerunning and Skateboarding. These pursuits not only
+          challenge me physically but also cultivate creativity and resilience.
+        </p>
+      </section>
+      <br />
+      <section id="experience">
+        <h1 class="section-title">Experience</h1>
+        <ul class="section-text-title">
+          <li>Advanced Video Production, Walnut High School</li>
+        </ul>
+      </section>
+      <br />
+      <section id="education">
+        <h1 class="section-title">Education</h1>
+        <ul class="section-text-title">
+          <li>Walnut High School</li>
+          <li>Self-Taught, Online</li>
+          <li>Amazon AWS Skill Builder</li>
+          <li>FreeCodeCamp.org</li>
+          <li>Youtube.com</li>
+        </ul>
+      </section>
+    </div>
+  </body>
 </html>
