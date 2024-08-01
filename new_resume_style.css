@@ -162,3 +162,7 @@ body {
 .section-text-title {
   font-weight: bold;
 }
+
+.indent {
+  margin-left: 3vw;
+}
